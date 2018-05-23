@@ -32,7 +32,8 @@ function truncateString(string, maxLength) {
     return string;
   }
 }
-function extractCurrencyValue(string){
+
+function extractCurrencyValue(string) {
   var indexOfCurrencySymbol = 0;
-  return +string.slice(indexOfCurrencySymbol+1);
+  return +string.slice(indexOfCurrencySymbol + 1);
 }

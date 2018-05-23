@@ -51,13 +51,6 @@ function remove(object, cls) {
   });
   object["classNames"] = filtered.join(" ");
 }
-addClass(obj, "close");
-addClass(obj, "open");
-alert(obj.classNames);
-removeClass(obj, "open");
-alert(obj.classNames);
-
-var arr = ["Есть", "жизнь", "на", "Марсе"];
 // Код ниже получает из массива строк новый массив, содержащий их длины:
 function getArrayOfLengths() {
   var arr = ["Есть", "жизнь", "на", "Марсе"];
@@ -65,13 +58,31 @@ function getArrayOfLengths() {
   for (var i = 0; i < arr.length; i++) {
     arrLength[i] = arr[i].length;
   }
-  alert(arrLength); // 4,5,2,5
-};
-getArrayOfLengths();
+  return arrLength;
+}
 // Перепишите выделенный участок: уберите цикл, используйте вместо него метод map.
 function getWithMap(array) {
   return array.map(function(element) {
     return element.length;
   });
 }
-alert(getWithMap(arr));
+
+function firstArgumentIsUndefined(x) {
+  if (x === undefined) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// Напишите функцию sum(...), которая возвращает сумму всех своих аргументов:
+function sumArgs() {
+  var arrayOfArgs = [];
+  for (var i = 0; i < arguments.length; i++) {
+    if(arguments[i]!==undefined){
+      arrayOfArgs.push(arguments[i]);
+    }
+  }
+  return arrayOfArgs.reduce(function(argument,nextArgument){
+    return argument+nextArgument;
+  })
+}

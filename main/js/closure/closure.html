@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- подключаем стили Mocha, для отображения результатов -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Closure</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
   <!-- подключаем библиотеку Mocha -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
@@ -19,12 +20,10 @@
     var assert = chai.assert;
   </script>
 </head>
-
 <body>
-  <script src="../js/functional/testedFunctional.js"type="text/javascript"></script>
-  <script src="specification.js"></script>
+  <script src="closure.js"type="text/javascript"></script>
+  <script src="closureSpec.js"></script>
   <div id="mocha"></div>
-
   <!-- запустить тесты! -->
   <script>
     mocha.run();
