@@ -17,3 +17,23 @@ function Calculator(firstArg, secondArg) {
     this.secondArg = +prompt("Введите слагаемое");
   }
 };
+
+function Machine(name, power) {
+  this._name = name;
+  this._power = power;
+  this._isOn = false;
+}
+Machine.prototype.work = function() {
+  this._isOn = true;
+  alert("Working " + this._name);
+}
+
+function Freezer(name, power) {
+  Machine.apply(this, arguments);
+}
+Freezer.prototype = Object.create(Machine.prototype);
+Freezer.prototype.constructor = Freezer;
+Freezer.prototype.work = function(){
+  Machine.prototype.work.apply(this,arguments);
+  alert("Freezing");
+}
